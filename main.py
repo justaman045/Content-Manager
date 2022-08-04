@@ -13,7 +13,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Check for Update then notify the User 
-# GetUpdate()
+GetUpdate()
 
 # What the user wants to do 
 option = pg.confirm("Select your option to Manage", os.getenv("BotName"), buttons=['Mail', 'Promote Post', "Blog Post"])
