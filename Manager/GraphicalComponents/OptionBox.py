@@ -52,12 +52,12 @@ def PlatformsToUpload(platforms=['Dev.to', 'Medium', "CodeItDown", "All"], title
     root.mainloop()
 
 def getAllCateogarys():
-    allCateogary = requests.get(f'{os.getenv("codeitdownDomain")}/allCateogary/').json()
+    allCateogary = requests.get(f'{os.getenv("BlogDomain")}/allCateogary/').json()
     licat = [x["Cateogary"] for x in allCateogary]
     PlatformsToUpload(platforms=licat, title="Select The Cateogary's in which Blogs to be Uploaded")
 
 def getAllHashtags():
     allCateogary = requests.get(
-        f'{os.getenv("codeitdownDomain")}/hashtagall/').json()
+        f'{os.getenv("BlogDomain")}/hashtagall/').json()
     licat = [x["Hashtag"] for x in allCateogary]
     PlatformsToUpload(platforms=licat, title="Select The Cateogary's in which Blogs to be Uploaded")

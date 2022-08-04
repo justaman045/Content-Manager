@@ -7,7 +7,7 @@ import pymsgbox as pg
 
 
 def CodeItDown():
-    url = f'{os.getenv("codeitdownDomain")}/mail/'
+    url = f'{os.getenv("BlogDomain")}/mail/'
 
     MailHead = pg.prompt("Enter the Mail Title", os.getenv("BotName"))
     PostBox('Enter your Mail in Markdown')

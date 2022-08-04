@@ -35,10 +35,10 @@ def AutoBlogPost():
         sys.exit()
     for i in Platforms:
         if i == "Dev.to":
-            PostToDev(title, content, tags, image=image, canonicalURL=f'https://codeitdown.ml/posts/{slug}')
+            PostToDev(title, content, tags, image=image, canonicalURL=f'{os.getenv("BlogDomainPostURL")}{slug}')
         elif i == "Medium":
             PostToMedium(title, content, tags, image=image,
-                         canonicalURL=f'https://codeitdown.ml/posts/{slug}')
+                         canonicalURL=f'{os.getenv("BlogDomainPostURL")}{slug}')
         elif i == "CodeItDown":
             getAllCateogarys()
             PostToCodeItDown(title, content, tags, pyperclip.paste())

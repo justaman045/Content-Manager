@@ -76,7 +76,7 @@ def PostToCodeItDown(title: str, content: str, tags: list, cateogary: str, image
         "image": image
         }
 
-    response = requests.get(f'{os.getenv("codeitdownDomain")}/upload/', data=payload)
+    response = requests.get(f'{os.getenv("BlogDomain")}/upload/', data=payload)
 
 def PostToAll(title: str, content: str, tags: list, cateogary: str, image: str):
     tempTags =  ""
@@ -92,5 +92,5 @@ def PostToAll(title: str, content: str, tags: list, cateogary: str, image: str):
         "image": image
     }
 
-    response = requests.get(f'{os.getenv("codeitdownDomain")}/uploadToAll/', data=payload)
+    response = requests.get(f'{os.getenv("BlogDomain")}/uploadToAll/', data=payload)
 
