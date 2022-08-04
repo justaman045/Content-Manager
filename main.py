@@ -4,11 +4,17 @@ from Manager.GraphicalComponents.OptionBox import PlatformsToUpload
 from Manager.ProjektNotify.ProjektNotify import ProjektNotify
 from Manager.CodeItDown.codeitDown import CodeItDown
 from Manager.AutoBlogPost.main import AutoBlogPost
+from Nessesary_Components.ScriptUpdate import GetUpdate
 from Nessesary_Components.rss_json import get_posts_details
 import pyperclip as clip
 from dotenv import load_dotenv
 
 load_dotenv()
+
+try:
+    GetUpdate()
+except:
+    pass
 
 option = pg.confirm("Select your option to Manage", os.getenv("BotName"), buttons=['Mail', 'Promote Post', "Blog Post"])
 

@@ -2,6 +2,7 @@ import os
 import requests
 import json
 from dotenv import load_dotenv
+import pymsgbox as pg
 
 load_dotenv()
 
@@ -25,7 +26,11 @@ def PostToDev(title: str, content: str, tags: list, image: str, canonicalURL: st
         }
     })
 
-    respone = requests.post('https://dev.to/api/articles', headers=headers, data=body).json()
+    respone = requests.post('https://dev.to/api/articles', headers=headers, data=body)
+    if respone.status_code == 201:
+        pg.alert("Blog Post Sucessfully Uploaded on Dev.to", os.getenv("BotName"))
+    else:
+        pg.alert("Error Posting on Dev.to.\n\nCheck Terminal for Errors", os.getenv("BotName"))
 
 
 # Medium Post Request
@@ -48,7 +53,13 @@ def PostToMedium(title: str, content: str, tags: list, image: str, canonicalURL:
         'publishStatus': 'draft',
         'content': content,
     })
-    Publications = requests.post(userURL, headers=headers, data=body).json()
+    Publications = requests.post(userURL, headers=headers, data=body)
+    if Publications.status_code == 201:
+        pg.alert("Blog Post Sucessfully Uploaded on Medium",
+                 os.getenv("BotName"))
+    else:
+        pg.alert("Error Posting on Medium.\n\nCheck Terminal for Errors",
+                 os.getenv("BotName"))
 
 
 def PostToCodeItDown(title: str, content: str, tags: list, cateogary: str, image: str):
