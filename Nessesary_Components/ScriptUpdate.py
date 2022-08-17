@@ -18,8 +18,8 @@ def GetUpdate():
 
 
     res = requests.get(
-        "https://raw.githubusercontent.com/coderaman07/Content-Manager/master/Script_Version.py")
-    LatestVersion = str(res.text).split(" = ")[1].replace("'", "").split(".")
+        "https://raw.githubusercontent.com/coderaman07/Content-Manager/master/Script_Version.py").text
+    LatestVersion = str(res).split("=")[1].replace("'", "").replace('"', "").split(".")
     CurrentVersion = str(version).split(".")
     MajorUpdate, MinorUpdate, BugFixorPatches = False, False, False
     if (LatestVersion[0] > CurrentVersion[0]):
@@ -29,13 +29,13 @@ def GetUpdate():
     if (LatestVersion[2] > CurrentVersion[2]):
         BugFixorPatches = True
 
-    if MajorUpdate == True:
-        if MinorUpdate == True or BugFixorPatches == True:
+    if MajorUpdate is True:
+        if MinorUpdate is True or BugFixorPatches is True:
             MinorUpdate, BugFixorPatches = False, False
         printMSG("It's a Major Update. Update it as soon as possible")
-    elif MinorUpdate == True:
-        if BugFixorPatches == True:
+    if MinorUpdate is True:
+        if BugFixorPatches is True:
             BugFixorPatches = False
         printMSG("It's a Minor Update. Update it as you will get new features")
-    elif BugFixorPatches == True:
+    if BugFixorPatches is True:
         printMSG("It's a Bug Fix. Try Updating it as It may be related with your Privacy")
