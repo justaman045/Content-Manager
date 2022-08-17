@@ -10,7 +10,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 def ProjektNotify():
-    url = f"{os.getenv('projektnotify')}/mail/"
+    url = f"{os.getenv('ProjectWaitingListDomain')}/mail/"
 
     MailHead = pg.prompt("Enter the Mail Title", os.getenv('BotName'))
     PostBox('Enter your Mail in Markdown')
