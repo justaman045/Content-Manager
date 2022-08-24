@@ -10,7 +10,9 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-def PlatformsToUpload(platforms=['Dev.to', 'Medium', "CodeItDown", "All"], title="Select the Platforms to Upload"):
+def PlatformsToUpload(platforms=['Dev.to', 'Medium', "CodeItDown", "All"], title="Select the Platforms to Upload", LabelText = None):
+    if LabelText == None:
+        LabelText = "Select the Platforms to Upload"
     root = Tk()
     root.geometry("500x500")
     root.title(title)
@@ -37,7 +39,7 @@ def PlatformsToUpload(platforms=['Dev.to', 'Medium', "CodeItDown", "All"], title
         for i in InstalledApps:
             optionCheckBox[f"{i}"] = IntVar()
 
-    labl = Label(root, text=f"Select the Platforms to Upload")
+    labl = Label(root, text=LabelText)
     labl.config(font=("Courier", 12))
     labl.place(x=80, y=20)
 
@@ -60,4 +62,4 @@ def getAllHashtags():
     allCateogary = requests.get(
         f'{os.getenv("BlogDomain")}/hashtagall/').json()
     licat = [x["Hashtag"] for x in allCateogary]
-    PlatformsToUpload(platforms=licat, title="Select The Cateogary's in which Blogs to be Uploaded")
+    PlatformsToUpload(platforms=licat, title="Select 4 Hashtags in which Blogs to be Uploaded", LabelText="Select 4 Hashtags")

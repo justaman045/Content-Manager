@@ -42,6 +42,16 @@ def Promote(platform):
             message = f"Hii, Just so you get to know\n\nI wrote these Blog Posts Named\n\n{htmlTitles}\n\n You can access the same from the links below \n\n{htmlLinks}"
     for i in platforms:
         if i == "Twitter":
+            if len(message) < 270:
+                newMessage = f'{message}\n#DEVCommunity'
+            elif len(message) < 260:
+                newMessage = f'{message}\n#100DaysOfCode'
+            elif len(message) < 250:
+                newMessage = f'{message}\n#100DaysOfCode #python'
+            elif len(message) < 240:
+                newMessage = f'{message}\n#100DaysOfCode #python #DEVCommunity '
+            else:
+                newMessage = message
             auth = tweepy.OAuthHandler(
                 os.getenv("ConsumerKeyTwitter"), os.getenv("ConsumerKeySecretTwitter"))
             auth.set_access_token(
@@ -50,6 +60,8 @@ def Promote(platform):
             api = tweepy.API(auth)
             client = tweepy.Client(consumer_key=os.getenv("ConsumerKeyTwitter"), consumer_secret=os.getenv("ConsumerKeySecretTwitter"),
                                    access_token=os.getenv("AccesTokenTwitter"), access_token_secret=os.getenv("AccessTokenSecretTwitter"), bearer_token=os.getenv("BearerTokenTwitter"))
-            client.create_tweet(text=message)
+            client.create_tweet(text=newMessage)
         if i == "Reddit":
-            pass
+            subreddits = ["programming", "ProgrammerHumor",
+                          "learnprogramming", "AskProgramming", "coding", "learnpython"]
+            pg.alert("Subreddits not confirmed yet as so this feature of reddit promotion\n\nAs a result this program will skip this promotion", "In Development")

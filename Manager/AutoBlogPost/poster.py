@@ -18,7 +18,7 @@ def PostToDev(title: str, content: str, tags: list, image: str, canonicalURL: st
     body = json.dumps({
         "article": {
             "title": title,
-            "published": False,
+            "published": True,
             "body_markdown": content,
             "main_image": image,
             "canonical_url": canonicalURL,
@@ -49,8 +49,8 @@ def PostToMedium(title: str, content: str, tags: list, image: str, canonicalURL:
         'contentFormat': 'markdown',
         'tags': tags,
         "canonicalUrl": canonicalURL,
-        "notifyFollowers": False,
-        'publishStatus': 'draft',
+        "notifyFollowers": True,
+        'publishStatus': 'public',
         'content': content,
     })
     Publications = requests.post(userURL, headers=headers, data=body)
@@ -76,7 +76,7 @@ def PostToCodeItDown(title: str, content: str, tags: list, cateogary: str, image
         "image": image
         }
 
-    response = requests.get(f'{os.getenv("BlogDomain")}/upload/', data=payload)
+    response = requests.post(f'{os.getenv("BlogDomain")}/upload/', data=payload)
 
 def PostToAll(title: str, content: str, tags: list, cateogary: str, image: str):
     tempTags =  ""
@@ -92,5 +92,5 @@ def PostToAll(title: str, content: str, tags: list, cateogary: str, image: str):
         "image": image
     }
 
-    response = requests.get(f'{os.getenv("BlogDomain")}/uploadToAll/', data=payload)
+    response = requests.post(f'{os.getenv("BlogDomain")}/uploadToAll/', data=payload)
 

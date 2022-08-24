@@ -2,7 +2,7 @@
 import os
 import sys
 import pymsgbox as pg
-from Manager.AutoBlogPost.poster import PostToDev, PostToMedium, PostToCodeItDown
+from Manager.AutoBlogPost.poster import PostToAll, PostToDev, PostToMedium, PostToCodeItDown
 from Manager.GraphicalComponents.OptionBox import PlatformsToUpload, getAllCateogarys, getAllHashtags
 import pyperclip
 from Manager.GraphicalComponents.PostBox import PostBox
@@ -56,8 +56,10 @@ def AutoBlogPost():
                          canonicalURL=f'{os.getenv("BlogDomainPostURL")}{slug}')
         elif i == "CodeItDown":
             getAllCateogarys()
-            PostToCodeItDown(title, content, tags, pyperclip.paste())
+            PostToCodeItDown(title, content, tags, pyperclip.paste(), image)
         elif i == "All":
             getAllCateogarys()
-            PostToCodeItDown(title, content, tags, pyperclip.paste())
+            PostToAll(title, content, tags, pyperclip.paste(), image)
+            pg.alert("Uploaded Blog Posts")
+
     
