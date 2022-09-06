@@ -11,7 +11,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/coderaman07/Content-Manager">
+  <a href="https://github.com/coderaman7/Content-Manager">
     <img src="assets/logo.png" alt="Logo" width="400" height="80">
   </a>
 
@@ -20,14 +20,14 @@
   <p align="center">
     This Project is a Blog Manager for a Blogger ( particularly Tech Blogger ), this project will post your Stories and Blogs on selected platforms without even opening browser using API keys.
     <br />
-    <a href="https://github.com/coderaman07/Content-Manager"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/coderaman7/Content-Manager"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/coderaman07/Content-Manager">View Demo</a>
+    <a href="https://github.com/coderaman7/Content-Manager">View Demo</a>
     ·
-    <a href="https://github.com/coderaman07/Content-Manager/issues">Report Bug</a>
+    <a href="https://github.com/coderaman7/Content-Manager/issues">Report Bug</a>
     ·
-    <a href="https://github.com/coderaman07/Content-Manager/issues">Request Feature</a>
+    <a href="https://github.com/coderaman7/Content-Manager/issues">Request Feature</a>
   </p>
 </div>
 
@@ -101,7 +101,7 @@ This Project requires you to only have installed these Software in your System
   - [Twitter](https://developer.twitter.com/en) signup for Twitter Developer account and obtain your API, Access and Bearer Tokens
 2. Clone the repo
    ```sh
-   git clone https://github.com/coderaman07/Content-Manager.git
+   git clone https://github.com/coderaman7/Content-Manager.git
    ```
 3. Install NPM packages
    ```sh
@@ -146,7 +146,7 @@ _Try this on your own and please update me if this was usefull to you or not._
   - [x] Medium
   - [ ] Hashnode
 
-See the [open issues](https://github.com/coderaman07/Content-Manager/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/coderaman7/Content-Manager/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -184,7 +184,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Your Name - [@BugsOverflow](https://twitter.com/BugsOverflow) - bugsoverflow@gmail.com
 
-Project Link: [https://github.com/coderaman07/Content-Manager](https://github.com/coderaman07/Content-Manager)
+Project Link: [https://github.com/coderaman7/Content-Manager](https://github.com/coderaman7/Content-Manager)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -194,18 +194,18 @@ Project Link: [https://github.com/coderaman07/Content-Manager](https://github.co
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/coderaman07/Content-Manager.svg?style=for-the-badge
-[contributors-url]: https://github.com/coderaman07/Content-Manager/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/coderaman07/Content-Manager.svg?style=for-the-badge
-[forks-url]: https://github.com/coderaman07/Content-Manager/network/members
-[stars-shield]: https://img.shields.io/github/stars/coderaman07/Content-Manager.svg?style=for-the-badge
-[stars-url]: https://github.com/coderaman07/Content-Manager/stargazers
-[issues-shield]: https://img.shields.io/github/issues/coderaman07/Content-Manager.svg?style=for-the-badge
-[issues-url]: https://github.com/coderaman07/Content-Manager/issues
-[license-shield]: https://img.shields.io/github/license/coderaman07/Content-Manager.svg?style=for-the-badge
-[license-url]: https://github.com/coderaman07/Content-Manager/blob/master/LICENSE
+[contributors-shield]: https://img.shields.io/github/contributors/coderaman7/Content-Manager.svg?style=for-the-badge
+[contributors-url]: https://github.com/coderaman7/Content-Manager/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/coderaman7/Content-Manager.svg?style=for-the-badge
+[forks-url]: https://github.com/coderaman7/Content-Manager/network/members
+[stars-shield]: https://img.shields.io/github/stars/coderaman7/Content-Manager.svg?style=for-the-badge
+[stars-url]: https://github.com/coderaman7/Content-Manager/stargazers
+[issues-shield]: https://img.shields.io/github/issues/coderaman7/Content-Manager.svg?style=for-the-badge
+[issues-url]: https://github.com/coderaman7/Content-Manager/issues
+[license-shield]: https://img.shields.io/github/license/coderaman7/Content-Manager.svg?style=for-the-badge
+[license-url]: https://github.com/coderaman7/Content-Manager/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/coderaman07
+[linkedin-url]: https://linkedin.com/in/coderaman7
 
 [product-screenshot]: assets/screen.png
 
