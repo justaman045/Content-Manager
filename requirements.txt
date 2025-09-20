@@ -10,4 +10,4 @@ python-dotenv==0.20.0
 requests==2.28.1
 sgmllib3k==1.0.0
 toml==0.10.2
-urllib3==1.26.11
+urllib3==2.5.0
